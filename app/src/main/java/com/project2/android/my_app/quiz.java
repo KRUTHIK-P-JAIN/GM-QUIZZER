@@ -698,7 +698,8 @@ public class quiz extends AppCompatActivity {
                                         user.put("College", college);
                                         user.put("Place", place);
                                         user.put("Password", password);
-
+                                        
+                                        // function call for phone authentication
                                         sendVerificationCodeToUser(phone);
                                     }
 
@@ -775,6 +776,7 @@ public class quiz extends AppCompatActivity {
         });
     }
 
+    // phone number authentication starts
     private void sendVerificationCodeToUser(String phone) {
 
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
@@ -896,6 +898,7 @@ public class quiz extends AppCompatActivity {
                     }
                 });
     }
+    // phone number authentication ends
 
 
     private void startTimer() throws ParseException {
